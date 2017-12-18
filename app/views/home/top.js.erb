@@ -1,0 +1,7 @@
+<% if @result["result"].present? %>
+  $('#error').empty();
+  $('#result').html("<%= @result["result"][0]["hand"] %>");
+<% elsif @result["error"].present? %>
+  $('#result').empty();
+  $('#error').html("<%= @result["error"][0]["msg"] %>");
+<% end %>
